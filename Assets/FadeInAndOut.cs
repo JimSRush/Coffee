@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GameController : MonoBehaviour {
-
-	public GameObject scene;
+public class FadeInAndOut : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -14,6 +12,4 @@ public class GameController : MonoBehaviour {
 	void Update () {
 	
 	}
-
-
 }
