@@ -1,23 +1,23 @@
 fileFormatVersion: 2
 guid: ec60e3c29e1c74cefad685a0e27bbe1c
-timeCreated: 1454107793
+timeCreated: 1454108237
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: paris_player_0
-    21300002: paris_player_1
-    21300004: paris_player_2
-    21300006: paris_player_3
-    21300008: paris_player_4
-    21300010: paris_player_5
-    21300012: paris_player_6
-    21300014: paris_player_7
-    21300016: paris_player_8
-    21300018: paris_player_9
-    21300020: paris_player_10
-    21300022: paris_player_11
-    21300024: paris_player_12
-    21300026: paris_player_13
+    21300000: paris_player_head
+    21300002: paris_player_arm_front_upper
+    21300004: paris_player_body
+    21300006: paris_player_arm_back_upper
+    21300008: paris_player_arm_front_lower
+    21300010: paris_player_arm_back_lower
+    21300012: paris_player_hand_back
+    21300014: paris_player_hand_front
+    21300016: paris_player_leg_front_upper
+    21300018: paris_player_leg_back_upper
+    21300020: paris_player_leg_front_lower
+    21300022: paris_player_leg_back_lower
+    21300024: paris_player_foot_front
+    21300026: paris_player_foot_back
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -64,7 +64,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: paris_player_0
+    - name: paris_player_head
       rect:
         serializedVersion: 2
         x: 49
@@ -74,7 +74,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .606990457, y: .127673343}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: paris_player_1
+    - name: paris_player_arm_front_upper
       rect:
         serializedVersion: 2
         x: 25
@@ -84,7 +84,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .837019682, y: .859487176}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: paris_player_2
+    - name: paris_player_body
       rect:
         serializedVersion: 2
         x: 44
@@ -94,7 +94,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .557981908, y: .175462514}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: paris_player_3
+    - name: paris_player_arm_back_upper
       rect:
         serializedVersion: 2
         x: 75
@@ -104,7 +104,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .292603701, y: .847231805}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: paris_player_4
+    - name: paris_player_arm_front_lower
       rect:
         serializedVersion: 2
         x: 25
@@ -114,7 +114,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .500000238, y: .899430454}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: paris_player_5
+    - name: paris_player_arm_back_lower
       rect:
         serializedVersion: 2
         x: 81
@@ -124,7 +124,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .176461488, y: .62255168}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: paris_player_6
+    - name: paris_player_hand_back
       rect:
         serializedVersion: 2
         x: 110
@@ -134,7 +134,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .154339135, y: .119772106}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: paris_player_7
+    - name: paris_player_hand_front
       rect:
         serializedVersion: 2
         x: 28
@@ -144,7 +144,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .20042716, y: .89318943}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: paris_player_8
+    - name: paris_player_leg_front_upper
       rect:
         serializedVersion: 2
         x: 47
@@ -154,7 +154,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .447134346, y: .915657222}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: paris_player_9
+    - name: paris_player_leg_back_upper
       rect:
         serializedVersion: 2
         x: 65
@@ -164,7 +164,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .357022375, y: .88022691}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: paris_player_10
+    - name: paris_player_leg_front_lower
       rect:
         serializedVersion: 2
         x: 36
@@ -174,7 +174,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .75677669, y: .897108018}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: paris_player_11
+    - name: paris_player_leg_back_lower
       rect:
         serializedVersion: 2
         x: 80
@@ -184,7 +184,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .371611446, y: .903271019}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: paris_player_12
+    - name: paris_player_foot_front
       rect:
         serializedVersion: 2
         x: 32
@@ -194,7 +194,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .325249135, y: .769614518}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: paris_player_13
+    - name: paris_player_foot_back
       rect:
         serializedVersion: 2
         x: 87
