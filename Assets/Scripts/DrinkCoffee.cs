@@ -5,7 +5,6 @@ public class DrinkCoffee : MonoBehaviour {
 
 	private Animator animator;
 	private bool isDrinking = false;
-	private float currentAmountDrunk = 0.0f;
 
 	void Start () {
 		animator = GetComponent<Animator>();
@@ -21,12 +20,10 @@ public class DrinkCoffee : MonoBehaviour {
 		if (Input.GetKeyUp("space")) {
 			isDrinking = false;
 			animator.SetBool("IsDrinkingCoffee", isDrinking);
-			GameController.totalTimeSpentDrinkingCoffee += currentAmountDrunk;
-			currentAmountDrunk = 0.0f;
 			Debug.Log("Total drunk: " + GameController.totalTimeSpentDrinkingCoffee);
 		}
 		if (animator.GetCurrentAnimatorStateInfo(0).IsName("Paris_Drink_Coffee")) {
-			currentAmountDrunk += 1f * Time.deltaTime;
+			GameController.totalTimeSpentDrinkingCoffee += 1.0f * Time.deltaTime;
 		}
 	}
 }
