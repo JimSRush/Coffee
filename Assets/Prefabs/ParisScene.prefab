@@ -297,6 +297,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 435784}
+  - 114: {fileID: 11425048}
   m_Layer: 0
   m_Name: ParisScene
   m_TagString: Paris Scene
@@ -713,6 +714,23 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &11425048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0f10ccfa0a54e89800c8b98dbaae06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amountToDrink: 25
+  fade: {fileID: 0}
+  player: {fileID: 131042}
+  gameController: {fileID: 0}
+  initialIdleTimeToTransition: 10
+  timeToTransition: 5
 --- !u!114 &11442682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1263,6 +1281,14 @@ Prefab:
       propertyPath: m_TagString
       value: Paris Scene
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: amountToDrink
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 131042}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 179394}

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(AudioSource))]
@@ -9,6 +9,7 @@ public class DrinkCoffee : MonoBehaviour {
 
 	private AudioSource audioSource;
 	private Animator animator;
+	private bool hasStartedDrinking = false;
 	private bool isDrinking = false;
 
 	void Start () {
@@ -25,11 +26,13 @@ public class DrinkCoffee : MonoBehaviour {
 		}
 		else if (Input.GetKeyUp("space")) {
 			isDrinking = false;
-			animator.SetBool("IsDrinkingCoffee", isDrinking);
+			animator.SetBool("IsDrinkingCoffee", false);
 			Debug.Log("Total drunk: " + GameController.totalTimeSpentDrinkingCoffee);
 		}
 		if (!animator.IsInTransition(0) && animator.GetCurrentAnimatorStateInfo(0).IsName("Paris_Drink_Coffee")) {
 			GameController.totalTimeSpentDrinkingCoffee += 1.0f * Time.deltaTime;
+			if (hasStartedDrinking == false) hasStartedDrinking = true;
+			isDrinking = true;
 
 	        if (!audioSource.isPlaying) {
 				audioSource.PlayOneShot(drinkingClips[Random.Range(0, drinkingClips.Length)]);
@@ -40,5 +43,13 @@ public class DrinkCoffee : MonoBehaviour {
 //				audioSource.PlayOneShot(cupClips[Random.Range(0, cupClips.Length)]);
 //	        }
 //		}
+	}
+
+	public bool IsDrinking () {
+		return isDrinking;
+	}
+
+	public bool HasStartedDrinking () {
+		return hasStartedDrinking;
 	}
 }

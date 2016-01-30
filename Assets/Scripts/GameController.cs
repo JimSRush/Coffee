@@ -43,4 +43,8 @@ public class GameController : MonoBehaviour {
 			//endgame scenario
 		}
 	}
+
+	public bool IsChangingScene () {
+		return ChangingScene;
+	}
 }
