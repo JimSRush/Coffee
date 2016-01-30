@@ -10,7 +10,8 @@ public class GameController : MonoBehaviour {
 	private Fade fader;
 	public Canvas c;
 	private bool ChangingScene = false;
-	private int goalTime = 5;
+	private int goalTime = 9;
+	public static bool IsInputEnabled;
 
 	void Start() {
 		currentScene = Object.Instantiate (scenePrefabs[0]);
@@ -24,7 +25,6 @@ public class GameController : MonoBehaviour {
 			StartCoroutine ("changeScene");
 			ChangingScene = true;
 		}
-
 	}
 
 	IEnumerator changeScene() {

@@ -15,25 +15,25 @@ public class Fade : MonoBehaviour {
 	}
 
 	IEnumerator DoFadeIn(){
+		GameController.IsInputEnabled = false;
 		cg = GetComponent<CanvasGroup> ();
-
 		while (cg.alpha > 0) {
 			cg.alpha -= Time.deltaTime / FadeTime;
 			yield return null;
 		}
-		cg.interactable = false;
+		GameController.IsInputEnabled = true;
 		yield return null;
 	}
 
 	IEnumerator DoFadeOut() {
 		Debug.Log ("Fading out");
+		GameController.IsInputEnabled = false;
 		cg = GetComponent<CanvasGroup> ();
-		//cg.alpha = 0f;
 		while (cg.alpha < 1) {
 			cg.alpha += Time.deltaTime / FadeTime;
 			yield return null;
 		}
-		cg.interactable = false;
+		GameController.IsInputEnabled = true;
 		yield return null;
 	}
 

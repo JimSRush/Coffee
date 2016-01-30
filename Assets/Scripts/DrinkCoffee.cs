@@ -17,7 +17,7 @@ public class DrinkCoffee : MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.GetKeyDown("space")) {
+		if (Input.GetKeyDown("space") && GameController.IsInputEnabled) {
 			isDrinking = true;
 			animator.SetBool("IsDrinkingCoffee", isDrinking);
 			Debug.Log("Total drunk: " + GameController.totalTimeSpentDrinkingCoffee);
