@@ -1026,6 +1026,14 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 401376, guid: 0549129c47922400b81514800e4e8a60, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.065782376
+      objectReference: {fileID: 0}
+    - target: {fileID: 401376, guid: 0549129c47922400b81514800e4e8a60, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.997834
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0549129c47922400b81514800e4e8a60, type: 2}
   m_IsPrefabParent: 0
@@ -1249,6 +1257,7 @@ MonoBehaviour:
   scene2: {fileID: 0}
   scene3: {fileID: 0}
   scene4: {fileID: 0}
+  c: {fileID: 644465904}
 --- !u!4 &1747505200
 Transform:
   m_ObjectHideFlags: 0
