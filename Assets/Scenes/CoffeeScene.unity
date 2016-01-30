@@ -880,6 +880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenePrefabs:
+  - {fileID: 168228, guid: a10e40af23e194370832fdfa372bde4a, type: 2}
   - {fileID: 179394, guid: b689c5a5a518e443191612642a222e15, type: 2}
   c: {fileID: 644465904}
 --- !u!4 &1747505200
