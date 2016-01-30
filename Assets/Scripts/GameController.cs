@@ -12,21 +12,11 @@ public class GameController : MonoBehaviour {
 	private bool ChangingScene = false;
 	private int goalTime = 5;
 
-	//public Canvas c
-
-	//	// Use this for initialization
-	//	void Start () {
-	//		StartCoroutine ("SwitchScenesOverTime");
-	//	}
-
 	void Start() {
-		//currentScene = 
 		currentScene = Object.Instantiate (scenePrefabs[0]);
-		//	Debug.Log (GameObject.FindGameObjectWithTag ("Paris Scene"));
 		Debug.Log (currentScene.ToString ());
 		fader = c.GetComponent<Fade> ();
 		fader.FadeIn ();
-		StartCoroutine ("Wait");	
 	}
 
 	void Update () {
