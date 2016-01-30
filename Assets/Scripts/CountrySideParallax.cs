@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public struct CountrySideParallaxMember
 {
 	public GameObject member;
-	public int depth;
+	public float depth;
 }
 
 
@@ -13,6 +13,11 @@ public class CountrySideParallax : MonoBehaviour {
 	public List<CountrySideParallaxMember> members; 
 	public Vector3 speed;
 
+	public float sky_depth;
+	public float mountains_depth;
+	public float hills_depth;
+	public float powerlines_depth;
+
 	// Use this for initialization
 	void Start () {
 
@@ -20,19 +25,19 @@ public class CountrySideParallax : MonoBehaviour {
 		members = new List<CountrySideParallaxMember> ();
 		members.Add (new CountrySideParallaxMember{
 			member = this.transform.Find("train_bg_0").gameObject,
-			depth = 100000000
+			depth = sky_depth
 		});
 		members.Add (new CountrySideParallaxMember{
 			member = this.transform.Find("train_bg_1").gameObject,
-			depth = 100
+			depth = mountains_depth
 		});
 		members.Add (new CountrySideParallaxMember{
 			member = this.transform.Find ("train_bg_2").gameObject,
-			depth = 10
+			depth = hills_depth
 		});
 		members.Add (new CountrySideParallaxMember{
 			member = this.transform.Find ("train_bg_3").gameObject,
-			depth = 1
+			depth = powerlines_depth
 		});
 
 		// Make a copy of each member so that you don't see any joins when the scene wraps
@@ -43,9 +48,9 @@ public class CountrySideParallax : MonoBehaviour {
 			GameObject wrapHelper = Instantiate(m.member);
 
 			Transform t = wrapHelper.transform;
-			t.parent = this.transform;
-			t.position.Set(-wrapHelper.GetComponent<SpriteRenderer>().bounds.size.x,t.position.y,t.position.z);
-
+			Transform mt = m.member.transform;
+			t.parent = mt.parent;
+			t.localPosition = new Vector3(mt.localPosition.x-wrapHelper.GetComponent<SpriteRenderer>().bounds.size.x,mt.localPosition.y,mt.localPosition.z);
 			members.Add(new CountrySideParallaxMember{
 				member = wrapHelper,
 				depth = m.depth
@@ -56,13 +61,18 @@ public class CountrySideParallax : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		foreach (CountrySideParallaxMember m in members) {
+
+			// Move the backgrounds - higher depth = slower movement
 			m.member.transform.position += speed * 1f / m.depth;
 
-			float wrapDist = m.member.GetComponent<SpriteRenderer>().bounds.size.x;
-			if (m.member.transform.position.x > wrapDist*0.5) {
-				m.member.transform.position.Set (m.member.transform.position.x - wrapDist, 
-				                                 m.member.transform.position.y, 
-				                                 m.member.transform.position.z);
+			// Wrap the backgrounds if they pass outside the screen
+			float wrapDist = m.member.GetComponent<SpriteRenderer>().bounds.size.x * 2;
+			Vector3 lp = m.member.transform.localPosition;
+			if (lp.x > wrapDist*0.5) {
+				m.member.transform.localPosition = new Vector3(lp.x - wrapDist,lp.y,lp.z);
+			}
+			else if (lp.x < -wrapDist*0.5) {
+				m.member.transform.localPosition = new Vector3(lp.x + wrapDist,lp.y,lp.z);
 			}
 		}
 	}
