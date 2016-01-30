@@ -5,7 +5,7 @@ public class GameController : MonoBehaviour {
 
 	public GameObject[] scenePrefabs;
 	private GameObject currentScene;
-	private int currentScenePosition;
+	private int currentScenePosition = 0;
 	public static float totalTimeSpentDrinkingCoffee;
 	private Fade fader;
 	public Canvas c;
@@ -18,35 +18,37 @@ public class GameController : MonoBehaviour {
 //	}
 	
 	void Start() {
+		//currentScene = 
+		currentScene = Instantiate (scenePrefabs[0]);
+	//	Debug.Log (GameObject.FindGameObjectWithTag ("Paris Scene"));
+		Debug.Log (currentScene.ToString ());
 		fader = c.GetComponent<Fade> ();
 		fader.FadeIn ();
+		StartCoroutine ("Wait");
 	}
 		
 	void Update () {
 	}
 
-	void changeScene() {
+	IEnumerator changeScene() {
 		fader.FadeOut ();
-		currentScenePosition++;
+		yield return new WaitForSeconds (6);
 		DestroyObject (currentScene);
+		currentScenePosition++;
 		if (currentScenePosition < scenePrefabs.Length) {
 			currentScene = scenePrefabs [currentScenePosition];
 			Object.Instantiate (currentScene);
-			fader.FadeIn ();
+			fader.FadeIn ();	
 		} else {
 			//endgame scenario
 		}
 
 
 	}
-//
-//	IEnumerator SwitchScenesOverTime() {
-//
-//		GameObject go = Object.Instantiate (scene1);
-//		yield return new WaitForSeconds (sceneLength);
-//		go = Object.Instantiate (scene2);
-//		yield return new WaitForSeconds (5);
-//
-//
 
+	IEnumerator Wait() {
+		yield return new WaitForSeconds (10);
+		StartCoroutine ("changeScene");
+			
+	}
 }
