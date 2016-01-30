@@ -32,18 +32,13 @@ public class DrinkCoffee : MonoBehaviour {
 			GameController.totalTimeSpentDrinkingCoffee += 1.0f * Time.deltaTime;
 
 	        if (!audioSource.isPlaying) {
-//	        	audio.clip = drinkingClips[Random.Range(0, drinkingClips.Length)];
-//	        	audio.Play();
 				audioSource.PlayOneShot(drinkingClips[Random.Range(0, drinkingClips.Length)]);
 	        }
 		}
-		else if (animator.IsInTransition(0) && animator.GetNextAnimatorStateInfo(0).IsName("Paris_Idle")) {
-//			AudioSource audio = GetComponent<AudioSource>();
-			if (!audioSource.isPlaying) {
-				audioSource.PlayOneShot(cupClips[Random.Range(0, cupClips.Length)]);
-//	        	audio.clip = cupClips[Random.Range(0, cupClips.Length)];
-//	        	audio.Play();
-	        }
-		}
+//		else if (animator.IsInTransition(0) && animator.GetNextAnimatorStateInfo(0).IsName("Paris_Idle")) {
+//			if (!audioSource.isPlaying) {
+//				audioSource.PlayOneShot(cupClips[Random.Range(0, cupClips.Length)]);
+//	        }
+//		}
 	}
 }
