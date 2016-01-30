@@ -10,7 +10,6 @@ public class GameController : MonoBehaviour {
 	private Fade fader;
 	public Canvas c;
 	private bool ChangingScene = false;
-	private int goalTime = 9;
 	public static bool IsInputEnabled;
 
 	void Start() {
@@ -24,7 +23,6 @@ public class GameController : MonoBehaviour {
 		ChangingScene = true;
 		fader.FadeOut ();
 		yield return new WaitForSeconds (8);
-		goalTime += 15;
 		DestroyObject (currentScene);
 		currentScenePosition++;
 		if (currentScenePosition < scenePrefabs.Length) {

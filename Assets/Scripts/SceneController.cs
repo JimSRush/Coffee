@@ -15,6 +15,7 @@ public class SceneController : MonoBehaviour {
 	private Fade fader;
 	private float beginningAmount;
 	private float currentIdleTime = 0.0f;
+	private bool isLeavingScene = false;
 
 	// Use this for initialization
 	void Start () {
@@ -49,5 +50,10 @@ public class SceneController : MonoBehaviour {
 	void ProceedToNextScene () {
 		// Proceed to next scene
 		gameController.StartCoroutine ("changeScene");
+		isLeavingScene = true;
+	}
+
+	public bool IsLeavingScene () {
+		return isLeavingScene;
 	}
 }

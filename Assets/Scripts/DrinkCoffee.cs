@@ -5,7 +5,6 @@ using System.Collections;
 public class DrinkCoffee : MonoBehaviour {
 
 	public AudioClip[] drinkingClips;
-	public AudioClip[] cupClips;
 
 	private AudioSource audioSource;
 	private Animator animator;
@@ -36,11 +35,6 @@ public class DrinkCoffee : MonoBehaviour {
 				audioSource.PlayOneShot(drinkingClips[Random.Range(0, drinkingClips.Length)]);
 	        }
 		}
-//		else if (animator.IsInTransition(0) && animator.GetNextAnimatorStateInfo(0).IsName("Paris_Idle")) {
-//			if (!audioSource.isPlaying) {
-//				audioSource.PlayOneShot(cupClips[Random.Range(0, cupClips.Length)]);
-//	        }
-//		}
 	}
 
 	public bool IsDrinking () {
