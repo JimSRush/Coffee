@@ -32,6 +32,7 @@ public class GameController : MonoBehaviour {
 		if (currentScenePosition < scenePrefabs.Length) {
 			currentScene = scenePrefabs [currentScenePosition];
 			Object.Instantiate (currentScene);
+			fader.FadeIn ();
 		} else {
 			//endgame scenario
 		}
