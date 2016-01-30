@@ -5,7 +5,7 @@ public class GameController : MonoBehaviour {
 
 	public GameObject[] scenePrefabs;
 	private GameObject currentScene;
-	private int currentScenePosition;
+	private int currentScenePosition = 0;
 	public static float totalTimeSpentDrinkingCoffee;
 	private Fade fader;
 	public Canvas c;
@@ -18,6 +18,10 @@ public class GameController : MonoBehaviour {
 //	}
 	
 	void Start() {
+		//currentScene = 
+		currentScene = Instantiate (scenePrefabs[0]);
+	//	Debug.Log (GameObject.FindGameObjectWithTag ("Paris Scene"));
+		Debug.Log (currentScene.ToString ());
 		fader = c.GetComponent<Fade> ();
 		fader.FadeIn ();
 	}
