@@ -9,46 +9,48 @@ public class GameController : MonoBehaviour {
 	public static float totalTimeSpentDrinkingCoffee;
 	private Fade fader;
 	public Canvas c;
+	private bool ChangingScene = false;
+	private int goalTime = 5;
 
 	//public Canvas c
 
-//	// Use this for initialization
-//	void Start () {
-//		StartCoroutine ("SwitchScenesOverTime");
-//	}
-	
+	//	// Use this for initialization
+	//	void Start () {
+	//		StartCoroutine ("SwitchScenesOverTime");
+	//	}
+
 	void Start() {
 		//currentScene = 
-		currentScene = Instantiate (scenePrefabs[0]);
-	//	Debug.Log (GameObject.FindGameObjectWithTag ("Paris Scene"));
+		currentScene = Object.Instantiate (scenePrefabs[0]);
+		//	Debug.Log (GameObject.FindGameObjectWithTag ("Paris Scene"));
 		Debug.Log (currentScene.ToString ());
 		fader = c.GetComponent<Fade> ();
 		fader.FadeIn ();
-		StartCoroutine ("Wait");
+		StartCoroutine ("Wait");	
 	}
-		
+
 	void Update () {
+		if (totalTimeSpentDrinkingCoffee > goalTime && !ChangingScene) {
+			StartCoroutine ("changeScene");
+			ChangingScene = true;
+		}
+
 	}
 
 	IEnumerator changeScene() {
 		fader.FadeOut ();
-		yield return new WaitForSeconds (6);
+		yield return new WaitForSeconds (8);
+		goalTime += 15;
 		DestroyObject (currentScene);
 		currentScenePosition++;
 		if (currentScenePosition < scenePrefabs.Length) {
 			currentScene = scenePrefabs [currentScenePosition];
-			Object.Instantiate (currentScene);
-			fader.FadeIn ();	
+			currentScene = Object.Instantiate (currentScene);
+			ChangingScene = false;
+			fader.FadeIn ();
+
 		} else {
 			//endgame scenario
 		}
-
-
-	}
-
-	IEnumerator Wait() {
-		yield return new WaitForSeconds (10);
-		StartCoroutine ("changeScene");
-			
 	}
 }
