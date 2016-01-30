@@ -3,27 +3,48 @@ using System.Collections;
 
 public class GameController : MonoBehaviour {
 
-	public GameObject scene1, scene2, scene3, scene4;
+	public GameObject[] scenePrefabs;
+	private GameObject currentScene;
+	private int currentScenePosition = 0;
 	public static float totalTimeSpentDrinkingCoffee;
+	private Fade fader;
+	public Canvas c;
+	private bool ChangingScene = false;
+	private int goalTime = 9;
+	public static bool IsInputEnabled;
 
-
-	// Use this for initialization
-	void Start () {
-		StartCoroutine ("SwitchScenesOverTime");
+	void Start() {
+		currentScene = Object.Instantiate (scenePrefabs[0]);
+		Debug.Log (currentScene.ToString ());
+		fader = c.GetComponent<Fade> ();
+		fader.FadeIn ();
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
-		
+		if (totalTimeSpentDrinkingCoffee > goalTime && !ChangingScene) {
+			StartCoroutine ("changeScene");
+			ChangingScene = true;
+		}
 	}
 
-	IEnumerator SwitchScenesOverTime() {
+	IEnumerator changeScene() {
+		fader.FadeOut ();
+		yield return new WaitForSeconds (8);
+		goalTime += 15;
+		DestroyObject (currentScene);
+		currentScenePosition++;
+		if (currentScenePosition < scenePrefabs.Length) {
+			currentScene = scenePrefabs [currentScenePosition];
+			currentScene = Object.Instantiate (currentScene);
+			ChangingScene = false;
+			fader.FadeIn ();
 
-		GameObject go = Object.Instantiate (scene1);
-		yield return new WaitForSeconds (5);
-		go = Object.Instantiate (scene2);
-		yield return new WaitForSeconds (5);
+		} else {
+			//endgame scenario
+		}
 	}
 
-
+	public bool IsChangingScene () {
+		return ChangingScene;
+	}
 }
