@@ -708,7 +708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa4d359b125174e8bb4485b9146db918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  masterMixer: {fileID: 0}
+  masterMixer: {fileID: 24100000, guid: dd6d2ea0bb0144db6b0af82d42108f65, type: 2}
   snapshots:
   - {fileID: 24546174, guid: dd6d2ea0bb0144db6b0af82d42108f65, type: 2}
   - {fileID: 24500003, guid: dd6d2ea0bb0144db6b0af82d42108f65, type: 2}
@@ -717,7 +717,7 @@ MonoBehaviour:
   - {fileID: 24544364, guid: dd6d2ea0bb0144db6b0af82d42108f65, type: 2}
   - {fileID: 24553926, guid: dd6d2ea0bb0144db6b0af82d42108f65, type: 2}
   - {fileID: 24577782, guid: dd6d2ea0bb0144db6b0af82d42108f65, type: 2}
-  fadeTime: 1
+  fadeTime: 5
 --- !u!1 &1402039166
 GameObject:
   m_ObjectHideFlags: 0
