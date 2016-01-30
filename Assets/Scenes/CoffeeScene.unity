@@ -373,7 +373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &644465899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,64 +560,6 @@ MonoBehaviour:
   - {fileID: 24553926, guid: dd6d2ea0bb0144db6b0af82d42108f65, type: 2}
   - {fileID: 24577782, guid: dd6d2ea0bb0144db6b0af82d42108f65, type: 2}
   fadeTime: 5
---- !u!1001 &1218862979
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 435784, guid: b689c5a5a518e443191612642a222e15, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -0.616
-      objectReference: {fileID: 0}
-    - target: {fileID: 435784, guid: b689c5a5a518e443191612642a222e15, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.38
-      objectReference: {fileID: 0}
-    - target: {fileID: 435784, guid: b689c5a5a518e443191612642a222e15, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 435784, guid: b689c5a5a518e443191612642a222e15, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 435784, guid: b689c5a5a518e443191612642a222e15, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 435784, guid: b689c5a5a518e443191612642a222e15, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 435784, guid: b689c5a5a518e443191612642a222e15, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 435784, guid: b689c5a5a518e443191612642a222e15, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 490738, guid: b689c5a5a518e443191612642a222e15, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.12810327
-      objectReference: {fileID: 0}
-    - target: {fileID: 490738, guid: b689c5a5a518e443191612642a222e15, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.99176085
-      objectReference: {fileID: 0}
-    - target: {fileID: 494758, guid: b689c5a5a518e443191612642a222e15, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0.12654527
-      objectReference: {fileID: 0}
-    - target: {fileID: 494758, guid: b689c5a5a518e443191612642a222e15, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.9919609
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b689c5a5a518e443191612642a222e15, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1402039166
 GameObject:
   m_ObjectHideFlags: 0
