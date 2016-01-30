@@ -23,7 +23,7 @@ public class DrinkCoffee : MonoBehaviour {
 			animator.SetBool("IsDrinkingCoffee", isDrinking);
 			Debug.Log("Total drunk: " + GameController.totalTimeSpentDrinkingCoffee);
 		}
-		else if (Input.GetKeyUp("space")) {
+		else if (Input.GetKeyUp("space") || (!GameController.IsInputEnabled && isDrinking)) {
 			isDrinking = false;
 			animator.SetBool("IsDrinkingCoffee", false);
 			Debug.Log("Total drunk: " + GameController.totalTimeSpentDrinkingCoffee);
