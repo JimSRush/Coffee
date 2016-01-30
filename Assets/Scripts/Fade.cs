@@ -7,9 +7,9 @@ public class Fade : MonoBehaviour {
 
 	public float FadeTime;
 
-	void Start(){
-		FadeIn ();
-	}
+//	void Start(){
+//		FadeIn ();
+//	}
 
 	public void FadeIn() {
 		StartCoroutine (DoFadeIn ());
