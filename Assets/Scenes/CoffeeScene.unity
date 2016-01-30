@@ -331,9 +331,9 @@ GameObject:
   - 223: {fileID: 644465904}
   - 114: {fileID: 644465903}
   - 114: {fileID: 644465902}
-  - 114: {fileID: 644465901}
   - 222: {fileID: 644465900}
   - 114: {fileID: 644465899}
+  - 114: {fileID: 644465901}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -353,14 +353,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.07352942, g: 0.07352942, b: 0.07352942, a: 1}
-  m_RaycastTarget: 1
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9f0b188a087354acb98f6cdc8099b385, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -382,10 +382,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 644465898}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ffab73de2f3347b1ad9eb07ca3d45d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 30f263fef7492439aa5b4c9f39ff121a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coveringPanel: {fileID: 644465899}
+  coveringPanelFadeIn: {fileID: 644465899}
+  coveringPanelFadeOut: {fileID: 644465899}
   fadeTime: 10
 --- !u!114 &644465902
 MonoBehaviour:
@@ -730,8 +731,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1747505200}
-  - 114: {fileID: 1747505199}
-  - 114: {fileID: 1747505198}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -739,31 +738,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1747505198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1747505197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ffab73de2f3347b1ad9eb07ca3d45d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coveringPanel: {fileID: 0}
-  fadeTime: 0
---- !u!114 &1747505199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1747505197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 536d32f7feb294d06a8b478567216a51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scene: {fileID: 1557883914}
 --- !u!4 &1747505200
 Transform:
   m_ObjectHideFlags: 0
