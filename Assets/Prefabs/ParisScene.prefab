@@ -550,7 +550,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 181606}
-  m_LocalRotation: {x: 0, y: 0, z: -0.027398244, w: 0.9996246}
+  m_LocalRotation: {x: 0, y: 0, z: 0.12810327, w: 0.99176085}
   m_LocalPosition: {x: -0.15, y: 0.34971708, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -602,7 +602,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126574}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.12654527, w: 0.9919609}
   m_LocalPosition: {x: -0.094000004, y: -0.13215128, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -726,9 +726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amountToDrink: 25
-  fade: {fileID: 0}
   player: {fileID: 131042}
-  gameController: {fileID: 0}
   initialIdleTimeToTransition: 10
   timeToTransition: 5
 --- !u!114 &11442682
