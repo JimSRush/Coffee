@@ -26,7 +26,7 @@ public class DrinkCoffee : MonoBehaviour {
 			Debug.Log("Total drunk: " + GameController.totalTimeSpentDrinkingCoffee);
 		}
 		if (animator.GetCurrentAnimatorStateInfo(0).IsName("Paris_Drink_Coffee")) {
-			currentAmountDrunk += 0.1f;
+			currentAmountDrunk += 1f * Time.deltaTime;
 		}
 	}
 }
