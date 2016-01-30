@@ -50,7 +50,7 @@ public class CountrySideParallax : MonoBehaviour {
 			Transform t = wrapHelper.transform;
 			Transform mt = m.member.transform;
 			t.parent = mt.parent;
-			t.localPosition = new Vector3(mt.localPosition.x-wrapHelper.GetComponent<SpriteRenderer>().bounds.size.x,mt.localPosition.y,mt.localPosition.z);
+			t.localPosition = new Vector3(mt.localPosition.x-wrapHelper.GetComponent<SpriteRenderer>().bounds.size.x/mt.parent.localScale.x, mt.localPosition.y,mt.localPosition.z);
 			members.Add(new CountrySideParallaxMember{
 				member = wrapHelper,
 				depth = m.depth
@@ -66,7 +66,7 @@ public class CountrySideParallax : MonoBehaviour {
 			m.member.transform.position += speed * 1f / m.depth;
 
 			// Wrap the backgrounds if they pass outside the screen
-			float wrapDist = m.member.GetComponent<SpriteRenderer>().bounds.size.x * 2;
+			float wrapDist = m.member.GetComponent<SpriteRenderer>().bounds.size.x/m.member.transform.parent.localScale.x * 2;
 			Vector3 lp = m.member.transform.localPosition;
 			if (lp.x > wrapDist*0.5) {
 				m.member.transform.localPosition = new Vector3(lp.x - wrapDist,lp.y,lp.z);
