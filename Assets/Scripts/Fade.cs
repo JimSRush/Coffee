@@ -16,6 +16,7 @@ public class Fade : MonoBehaviour {
 
 	IEnumerator DoFadeIn(){
 		cg = GetComponent<CanvasGroup> ();
+
 		while (cg.alpha > 0) {
 			cg.alpha -= Time.deltaTime / FadeTime;
 			yield return null;
@@ -25,9 +26,10 @@ public class Fade : MonoBehaviour {
 	}
 
 	IEnumerator DoFadeOut() {
+		Debug.Log ("Fading out");
 		cg = GetComponent<CanvasGroup> ();
-		cg.alpha = 0f;
-		while (cg.alpha < 255) {
+		//cg.alpha = 0f;
+		while (cg.alpha < 1) {
 			cg.alpha += Time.deltaTime / FadeTime;
 			yield return null;
 		}
