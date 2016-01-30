@@ -12,9 +12,13 @@ public class DrinkCoffee : MonoBehaviour {
 
 	void Update () {
 		if (Input.GetKeyDown("space")) {
-			isDrinking = !isDrinking;
+			isDrinking = true;
 			animator.SetBool("IsDrinkingCoffee", isDrinking);
 			//play slurp
+		}
+		if (Input.GetKeyUp("space")) {
+			isDrinking = false;
+			animator.SetBool("IsDrinkingCoffee", isDrinking);
 		}
 	}
 }
