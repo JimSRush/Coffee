@@ -1245,10 +1245,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4866b8f4570d44d3a8ba39c45f7e88c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene1: {fileID: 0}
-  scene2: {fileID: 0}
-  scene3: {fileID: 0}
-  scene4: {fileID: 0}
+  scenePrefabs: []
+  c: {fileID: 644465904}
 --- !u!4 &1747505200
 Transform:
   m_ObjectHideFlags: 0

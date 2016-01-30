@@ -3,9 +3,10 @@ using System.Collections;
 
 public class GameController : MonoBehaviour {
 
-	public GameObject scene1, scene2, scene3, scene4;
+	public GameObject[] scenePrefabs;
+	private GameObject currentScene;
+	private int currentScenePosition;
 	public static float totalTimeSpentDrinkingCoffee;
-	public static float sceneLength;
 	private Fade fader;
 	public Canvas c;
 
@@ -20,18 +21,31 @@ public class GameController : MonoBehaviour {
 		fader = c.GetComponent<Fade> ();
 		fader.FadeIn ();
 	}
-
-
+		
 	void Update () {
 	}
 
-	IEnumerator SwitchScenesOverTime() {
-
-		GameObject go = Object.Instantiate (scene1);
-		yield return new WaitForSeconds (sceneLength);
-		go = Object.Instantiate (scene2);
-		yield return new WaitForSeconds (5);
+	void changeScene() {
+		fader.FadeOut ();
+		currentScenePosition++;
+		DestroyObject (currentScene);
+		if (currentScenePosition < scenePrefabs.Length) {
+			currentScene = scenePrefabs [currentScenePosition];
+			Object.Instantiate (currentScene);
+		} else {
+			//endgame scenario
+		}
 
 
 	}
+//
+//	IEnumerator SwitchScenesOverTime() {
+//
+//		GameObject go = Object.Instantiate (scene1);
+//		yield return new WaitForSeconds (sceneLength);
+//		go = Object.Instantiate (scene2);
+//		yield return new WaitForSeconds (5);
+//
+//
+
 }

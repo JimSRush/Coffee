@@ -4,12 +4,7 @@ using System.Collections;
 public class Fade : MonoBehaviour {
 
 	CanvasGroup cg;
-
 	public float FadeTime;
-
-//	void Start(){
-//		FadeIn ();
-//	}
 
 	public void FadeIn() {
 		StartCoroutine (DoFadeIn ());
@@ -39,6 +34,5 @@ public class Fade : MonoBehaviour {
 		cg.interactable = false;
 		yield return null;
 	}
-
 
 }
