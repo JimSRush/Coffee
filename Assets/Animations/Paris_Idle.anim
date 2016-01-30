@@ -1474,6 +1474,78 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
+        value: -.150000006
+        inSlope: -.00399998808
+        outSlope: -.00399998808
+        tangentMode: 10
+      - time: .75
+        value: -.152999997
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.5
+        value: -.150000006
+        inSlope: .00399998808
+        outSlope: .00399998808
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: paris_player_body/paris_player_arm_front_upper
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .349717081
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .75
+        value: .349717081
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.5
+        value: .349717081
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: paris_player_body/paris_player_arm_front_upper
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .75
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.5
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: paris_player_body/paris_player_arm_front_upper
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3324,78 +3396,6 @@ AnimationClip:
       m_PostInfinity: 2
     attribute: m_LocalRotation.w
     path: paris_player_body/paris_player_head
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: -.150000006
-        inSlope: -.00399998808
-        outSlope: -.00399998808
-        tangentMode: 10
-      - time: .75
-        value: -.152999997
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 1.5
-        value: -.150000006
-        inSlope: .00399998808
-        outSlope: .00399998808
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_LocalPosition.x
-    path: paris_player_body/paris_player_arm_front_upper
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: .349717081
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .75
-        value: .349717081
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 1.5
-        value: .349717081
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_LocalPosition.y
-    path: paris_player_body/paris_player_arm_front_upper
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .75
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 1.5
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_LocalPosition.z
-    path: paris_player_body/paris_player_arm_front_upper
     classID: 4
     script: {fileID: 0}
   - curve:
