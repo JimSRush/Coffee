@@ -3,9 +3,17 @@ using System.Collections;
 
 public class DrinkCoffee : MonoBehaviour {
 
+	private Animator animator;
+	private bool isDrinking = false;
+
+	void Start () {
+		animator = GetComponent<Animator>();
+	}
+
 	void Update () {
-		if (Input.GetKey("space")) {
-			//animating is true
+		if (Input.GetKeyUp("space")) {
+			isDrinking = !isDrinking;
+			animator.SetBool("IsDrinkingCoffee", isDrinking);
 			//play slurp
 		}
 	}
