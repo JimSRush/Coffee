@@ -22,7 +22,6 @@ public class DrinkCoffee : MonoBehaviour {
 			isDrinking = true;
 			animator.SetBool("IsDrinkingCoffee", isDrinking);
 			Debug.Log("Total drunk: " + GameController.totalTimeSpentDrinkingCoffee);
-			//play slurp
 		}
 		else if (Input.GetKeyUp("space")) {
 			isDrinking = false;
@@ -32,7 +31,6 @@ public class DrinkCoffee : MonoBehaviour {
 		if (!animator.IsInTransition(0) && animator.GetCurrentAnimatorStateInfo(0).IsName("Paris_Drink_Coffee")) {
 			GameController.totalTimeSpentDrinkingCoffee += 1.0f * Time.deltaTime;
 			if (hasStartedDrinking == false) hasStartedDrinking = true;
-			isDrinking = true;
 
 	        if (!audioSource.isPlaying) {
 				audioSource.PlayOneShot(drinkingClips[Random.Range(0, drinkingClips.Length)]);

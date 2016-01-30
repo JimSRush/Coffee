@@ -20,14 +20,8 @@ public class GameController : MonoBehaviour {
 		fader.FadeIn ();
 	}
 
-	void Update () {
-		if (totalTimeSpentDrinkingCoffee > goalTime && !ChangingScene) {
-			StartCoroutine ("changeScene");
-			ChangingScene = true;
-		}
-	}
-
 	IEnumerator changeScene() {
+		ChangingScene = true;
 		fader.FadeOut ();
 		yield return new WaitForSeconds (8);
 		goalTime += 15;
