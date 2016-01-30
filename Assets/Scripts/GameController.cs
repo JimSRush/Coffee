@@ -7,23 +7,20 @@ public class GameController : MonoBehaviour {
 	public static float totalTimeSpentDrinkingCoffee;
 
 
-	// Use this for initialization
-	void Start () {
-		StartCoroutine ("SwitchScenesOverTime");
-	}
+//	// Use this for initialization
+//	void Start () {
+//		StartCoroutine ("SwitchScenesOverTime");
+//	}
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
 
-	IEnumerator SwitchScenesOverTime() {
-
-		GameObject go = Object.Instantiate (scene1);
-		yield return new WaitForSeconds (5);
-		go = Object.Instantiate (scene2);
-		yield return new WaitForSeconds (5);
-	}
-
-
+//	IEnumerator SwitchScenesOverTime() {
+//
+//		GameObject go = Object.Instantiate (scene1);
+//		yield return new WaitForSeconds (5);
+//		go = Object.Instantiate (scene2);
+//		yield return new WaitForSeconds (5);
+//	}
 }
