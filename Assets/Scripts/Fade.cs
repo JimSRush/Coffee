@@ -3,22 +3,26 @@ using System.Collections;
 
 public class Fade : MonoBehaviour {
 
+	CanvasGroup cg;
+
+	public float FadeTime;
+
 	void Start(){
-		FadeMe ();
+		FadeIn ();
 	}
 
-	public void FadeMe() {
+	public void FadeIn() {
 		StartCoroutine (DoFadeIn ());
-		Debug.Log ("Fading in");
-		//StartCoroutine (DoFadeOut ());
-		Debug.Log ("Fading out");
+	}
 
+	public void FadeOut(){
+		StartCoroutine (DoFadeOut ());
 	}
 
 	IEnumerator DoFadeIn(){
-		CanvasGroup cg = GetComponent<CanvasGroup> ();
+		cg = GetComponent<CanvasGroup> ();
 		while (cg.alpha > 0) {
-			cg.alpha -= Time.deltaTime / 2;
+			cg.alpha -= Time.deltaTime / FadeTime;
 			yield return null;
 		}
 		cg.interactable = false;
@@ -26,10 +30,10 @@ public class Fade : MonoBehaviour {
 	}
 
 	IEnumerator DoFadeOut() {
-		CanvasGroup cg = GetComponent<CanvasGroup> ();
+		cg = GetComponent<CanvasGroup> ();
 		cg.alpha = 0f;
 		while (cg.alpha < 255) {
-			cg.alpha += Time.deltaTime / 2;
+			cg.alpha += Time.deltaTime / FadeTime;
 			yield return null;
 		}
 		cg.interactable = false;
