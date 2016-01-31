@@ -21,8 +21,9 @@ public class MusicController : MonoBehaviour {
 			}
 		} else {
 			if (!isGameOver) {
+				Debug.Log("Transitioning to game over music");
 				isGameOver = true;
-				gameoverSnapshot.TransitionTo(fadeTime);
+				gameoverSnapshot.TransitionTo(fadeTime * 2.0f);
 			}
 		}
 	}
