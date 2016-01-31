@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour, IMetric {
 	public Canvas c;
 	private bool ChangingScene = false;
 	public static bool IsInputEnabled;
+	public static bool IsGameOver = false;
 
 	private MetricController metricController;
 
