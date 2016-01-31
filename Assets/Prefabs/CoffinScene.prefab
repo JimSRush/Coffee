@@ -26,6 +26,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 408114}
   - 212: {fileID: 21210540}
+  - 114: {fileID: 11466304}
   m_Layer: 0
   m_Name: CoffinScene
   m_TagString: Untagged
@@ -75,6 +76,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11466304
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f797ae463834388b73a6d78c28ca45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToWait: 8
+  finalAudioSnapshot: {fileID: 24577782, guid: dd6d2ea0bb0144db6b0af82d42108f65, type: 2}
 --- !u!212 &21210540
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -130,7 +144,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 25732b4621ea24075a8c2a62166a801b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -141,7 +155,16 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: finalAudioSnapshot
+      value: 
+      objectReference: {fileID: 24577782, guid: dd6d2ea0bb0144db6b0af82d42108f65,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: timeToWait
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 166892}
