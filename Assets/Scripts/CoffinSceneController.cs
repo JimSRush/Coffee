@@ -10,8 +10,8 @@ public class CoffinSceneController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		GameController.IsGameOver = true;
 		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+		GameController.IsGameOver = true;
 	}
 	
 	// Update is called once per frame

@@ -7,7 +7,7 @@ public class MusicController : MonoBehaviour {
 	public AudioMixer masterMixer;
 	public AudioMixerSnapshot[] snapshots;
 	public AudioMixerSnapshot gameoverSnapshot;
-	public float fadeTime = 10.0f;
+	public float fadeTime = 5.0f;
 	private int currentSnapshot = 0;
 	private float[] timeGoals = new float[]{0.0f, 5.0f, 10.0f, 15.0f, 25.0f, 50.0f, 75.0f, 100.0f};
 	private bool isGameOver = false;
