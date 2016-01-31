@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: ec60e3c29e1c74cefad685a0e27bbe1c
-timeCreated: 1454203672
+timeCreated: 1454207973
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -22,6 +22,24 @@ TextureImporter:
     21300030: paris_player_head_old
     21300032: paris_player_hand_mug
     21300034: paris_player_head_old_2
+    21300036: paris_player_arm_front_upper_2
+    21300038: paris_player_body_2
+    21300040: paris_player_arm_back_upper_2
+    21300042: paris_player_arm_front_lower_2
+    21300044: paris_player_4
+    21300046: paris_player_arm_front_upper_3
+    21300048: paris_player_body_3
+    21300050: paris_player_arm_back_upper_3
+    21300052: paris_player_arm_front_lower_3
+    21300054: paris_player_arm_back_lower_3
+    21300056: paris_player_leg_front_upper_3
+    21300058: paris_player_leg_back_upper_3
+    21300060: paris_player_leg_front_upper_2
+    21300062: paris_player_leg_back_upper_2
+    21300064: paris_player_leg_front_lower_3
+    21300066: paris_player_leg_back_lower_3
+    21300068: paris_player_leg_front_lower_2
+    21300070: paris_player_leg_back_lower_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -247,6 +265,186 @@ TextureImporter:
         height: 35
       alignment: 9
       pivot: {x: .606990516, y: .127673298}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: paris_player_arm_front_upper_2
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 216
+        width: 15
+        height: 20
+      alignment: 9
+      pivot: {x: .837019682, y: .859487176}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: paris_player_body_2
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 189
+        width: 31
+        height: 55
+      alignment: 9
+      pivot: {x: .557981908, y: .175462499}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: paris_player_arm_back_upper_2
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 212
+        width: 13
+        height: 22
+      alignment: 9
+      pivot: {x: .292603701, y: .847231805}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: paris_player_arm_front_lower_2
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 185
+        width: 8
+        height: 27
+      alignment: 9
+      pivot: {x: .500000179, y: .899430513}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: paris_player_4
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 199
+        width: 24
+        height: 10
+      alignment: 9
+      pivot: {x: .176461503, y: .62255168}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: paris_player_arm_front_upper_3
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 155
+        width: 16
+        height: 20
+      alignment: 9
+      pivot: {x: .837019682, y: .859487176}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: paris_player_body_3
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 128
+        width: 31
+        height: 55
+      alignment: 9
+      pivot: {x: .557981908, y: .175462499}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: paris_player_arm_back_upper_3
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 151
+        width: 13
+        height: 22
+      alignment: 9
+      pivot: {x: .292603701, y: .847231805}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: paris_player_arm_front_lower_3
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 124
+        width: 8
+        height: 27
+      alignment: 9
+      pivot: {x: .500000179, y: .899430513}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: paris_player_arm_back_lower_3
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 137
+        width: 24
+        height: 11
+      alignment: 9
+      pivot: {x: .176461503, y: .62255168}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: paris_player_leg_front_upper_3
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 80
+        width: 17
+        height: 40
+      alignment: 9
+      pivot: {x: .447134286, y: .915657222}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: paris_player_leg_back_upper_3
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 78
+        width: 22
+        height: 39
+      alignment: 9
+      pivot: {x: .357022405, y: .88022691}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: paris_player_leg_front_upper_2
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 78
+        width: 17
+        height: 40
+      alignment: 9
+      pivot: {x: .447134286, y: .915657222}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: paris_player_leg_back_upper_2
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 76
+        width: 22
+        height: 39
+      alignment: 9
+      pivot: {x: .357022405, y: .88022691}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: paris_player_leg_front_lower_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 35
+        width: 21
+        height: 43
+      alignment: 9
+      pivot: {x: .75677669, y: .897108018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: paris_player_leg_back_lower_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 36
+        width: 14
+        height: 39
+      alignment: 9
+      pivot: {x: .371611387, y: .903271019}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: paris_player_leg_front_lower_2
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 33
+        width: 21
+        height: 43
+      alignment: 9
+      pivot: {x: .75677669, y: .897108018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: paris_player_leg_back_lower_2
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 34
+        width: 14
+        height: 39
+      alignment: 9
+      pivot: {x: .371611387, y: .903271019}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
