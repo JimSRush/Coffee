@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: ec60e3c29e1c74cefad685a0e27bbe1c
-timeCreated: 1454202565
+timeCreated: 1454203672
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -21,6 +21,7 @@ TextureImporter:
     21300028: paris_player_head_young
     21300030: paris_player_head_old
     21300032: paris_player_hand_mug
+    21300034: paris_player_head_old_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -214,8 +215,8 @@ TextureImporter:
         y: 176
         width: 21
         height: 38
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .606990516, y: .127673298}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: paris_player_head_old
       rect:
@@ -236,6 +237,16 @@ TextureImporter:
         height: 12
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: paris_player_head_old_2
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 177
+        width: 21
+        height: 35
+      alignment: 9
+      pivot: {x: .606990516, y: .127673298}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
