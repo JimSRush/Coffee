@@ -23,7 +23,7 @@ public class MusicController : MonoBehaviour {
 			if (!isGameOver) {
 				Debug.Log("Transitioning to game over music");
 				isGameOver = true;
-				gameoverSnapshot.TransitionTo(fadeTime * 2.0f);
+				gameoverSnapshot.TransitionTo(fadeTime * 2.5f);
 			}
 		}
 	}

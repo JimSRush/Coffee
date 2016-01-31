@@ -7,6 +7,7 @@ public class CoffinSceneController : MonoBehaviour {
 	public float timeToWait = 8.0f;
 	private GameController gameController;
 	private float currentIdleTime = 0.0f;
+	private bool isLeavingScene = false;
 
 	// Use this for initialization
 	void Start () {
@@ -17,8 +18,9 @@ public class CoffinSceneController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		currentIdleTime += Time.deltaTime;
-		if (currentIdleTime > timeToWait) {
+		if (currentIdleTime > timeToWait && !isLeavingScene) {
 			ProceedToNextScene();
+			isLeavingScene = true;
 		}
 	}
 
