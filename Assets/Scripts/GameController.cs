@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour, IMetric {
 		totalTimeSpentDrinkingCoffee = 0.0f;
 		Debug.Log (currentScene.ToString ());
 		fader = c.GetComponent<Fade> ();
+		IsGameOver = false;
 		fader.FadeIn ();
 	}
 
