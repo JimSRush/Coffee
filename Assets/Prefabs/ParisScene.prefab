@@ -725,7 +725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f0f10ccfa0a54e89800c8b98dbaae06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountToDrink: 25
+  amountToDrink: 15
   player: {fileID: 131042}
   initialIdleTimeToTransition: 10
   timeToTransition: 5
@@ -1275,7 +1275,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: amountToDrink
-      value: 25
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: player
