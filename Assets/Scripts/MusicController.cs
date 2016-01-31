@@ -9,7 +9,7 @@ public class MusicController : MonoBehaviour {
 	public AudioMixerSnapshot gameoverSnapshot;
 	public float fadeTime = 5.0f;
 	private int currentSnapshot = 0;
-	private float[] timeGoals = new float[]{0.0f, 1.0f, 5.0f, 10.0f, 15.0f, 20.0f, 30.0f};
+	private float[] timeGoals = new float[]{0.0f, 1.0f, 5.0f, 10.0f, 15.0f, 20.0f, 30.0f, 10000.0f};
 	private bool isGameOver = false;
 
 	// Update is called once per frame
