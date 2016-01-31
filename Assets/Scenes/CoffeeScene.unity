@@ -373,7 +373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &644465899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -861,6 +861,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1747505200}
   - 114: {fileID: 1747505198}
+  - 114: {fileID: 1747505199}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -884,6 +885,22 @@ MonoBehaviour:
   - {fileID: 179394, guid: b689c5a5a518e443191612642a222e15, type: 2}
   - {fileID: 159306, guid: 3afd3efccaa5b46aabbe17a91e9b8909, type: 2}
   c: {fileID: 644465904}
+--- !u!114 &1747505199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1747505197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85beceb0f09cb4323acfa07d7d0ff1e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalCupsConsumed: 0
+  totalTimeDrinking: 0
+  totalTimeIdle: 0
+  numberOfSips: 0
+  numberOfTimesIdle: 0
 --- !u!4 &1747505200
 Transform:
   m_ObjectHideFlags: 0

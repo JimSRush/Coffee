@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SceneController : MonoBehaviour {
+public class SceneController : MonoBehaviour, IMetric {
 
 	public float amountToDrink;
 	public GameObject player;
@@ -16,6 +16,9 @@ public class SceneController : MonoBehaviour {
 	private float beginningAmount;
 	private float currentIdleTime = 0.0f;
 	private bool isLeavingScene = false;
+
+	// Metrics
+	private float totalTimeIdle = 0.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -37,10 +40,11 @@ public class SceneController : MonoBehaviour {
 					ProceedToNextScene();
 				}
 			} else {
+				totalTimeIdle += currentIdleTime;
 				currentIdleTime = 0.0f;
 
 				float amountDrunkThisScene = GameController.totalTimeSpentDrinkingCoffee - beginningAmount;
-				if (amountDrunkThisScene > amountToDrink) {
+				if (amountDrunkThisScene >= amountToDrink) {
 					ProceedToNextScene ();
 				}
 			}
@@ -51,9 +55,20 @@ public class SceneController : MonoBehaviour {
 		// Proceed to next scene
 		gameController.StartCoroutine ("changeScene");
 		isLeavingScene = true;
+		UpdateMetrics();
 	}
 
 	public bool IsLeavingScene () {
 		return isLeavingScene;
+	}
+
+	public void UpdateMetrics () {
+		MetricController mc = gameController.MetricController();
+		if (coffeeController.HasStartedDrinking()) {
+			mc.totalTimeIdle += totalTimeIdle;
+		}
+
+		float timeOnThisSceneDrinking = GameController.totalTimeSpentDrinkingCoffee - beginningAmount;
+		mc.totalCupsConsumed += timeOnThisSceneDrinking/amountToDrink;
 	}
 }

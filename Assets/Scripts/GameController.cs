@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GameController : MonoBehaviour {
+public class GameController : MonoBehaviour, IMetric {
 
 	public GameObject[] scenePrefabs;
 	private GameObject currentScene;
@@ -12,8 +12,12 @@ public class GameController : MonoBehaviour {
 	private bool ChangingScene = false;
 	public static bool IsInputEnabled;
 
+	private MetricController metricController;
+
 	void Start() {
 		currentScene = Object.Instantiate (scenePrefabs[0]);
+		metricController = GetComponent<MetricController>();
+		totalTimeSpentDrinkingCoffee = 0.0f;
 		Debug.Log (currentScene.ToString ());
 		fader = c.GetComponent<Fade> ();
 		fader.FadeIn ();
@@ -33,10 +37,20 @@ public class GameController : MonoBehaviour {
 
 		} else {
 			//endgame scenario
+			UpdateMetrics();
+			metricController.PrintMetrics();
 		}
 	}
 
 	public bool IsChangingScene () {
 		return ChangingScene;
+	}
+
+	public MetricController MetricController () {
+		return metricController;
+	}
+
+	public void UpdateMetrics() {
+		metricController.totalTimeDrinking = totalTimeSpentDrinkingCoffee;
 	}
 }
