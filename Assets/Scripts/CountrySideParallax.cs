@@ -1,13 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public struct CountrySideParallaxMember
-{
-	public GameObject member;
-	public float depth;
-}
-
-
 public class CountrySideParallax : MonoBehaviour {
 
 	public List<CountrySideParallaxMember> members; 
@@ -17,28 +10,26 @@ public class CountrySideParallax : MonoBehaviour {
 	public float mountains_depth;
 	public float hills_depth;
 	public float powerlines_depth;
+	public float trees_depth;
+
+	public float trees_wrap_width;
 
 	// Use this for initialization
 	void Start () {
 
+		GameObject tbg0 = this.transform.Find ("train_bg_0").gameObject;
+		GameObject tbg1 = this.transform.Find ("train_bg_1").gameObject;
+		GameObject tbg2 = this.transform.Find ("train_bg_2").gameObject;
+		GameObject tbg3 = this.transform.Find ("train_bg_3").gameObject;
+		GameObject tbg4 = this.transform.Find ("train_bg_4").gameObject;
+
 		// Add all the child objects with their given depth from the camera
 		members = new List<CountrySideParallaxMember> ();
-		members.Add (new CountrySideParallaxMember{
-			member = this.transform.Find("train_bg_0").gameObject,
-			depth = sky_depth
-		});
-		members.Add (new CountrySideParallaxMember{
-			member = this.transform.Find("train_bg_1").gameObject,
-			depth = mountains_depth
-		});
-		members.Add (new CountrySideParallaxMember{
-			member = this.transform.Find ("train_bg_2").gameObject,
-			depth = hills_depth
-		});
-		members.Add (new CountrySideParallaxMember{
-			member = this.transform.Find ("train_bg_3").gameObject,
-			depth = powerlines_depth
-		});
+		members.Add (new CountrySideParallaxMember(tbg0,sky_depth));
+		members.Add (new CountrySideParallaxMember (tbg1, mountains_depth));
+		members.Add (new CountrySideParallaxMember (tbg2, hills_depth));
+		members.Add (new CountrySideParallaxMember (tbg3, powerlines_depth));
+		members.Add (new CountrySideParallaxMember (tbg4, trees_depth, trees_wrap_width));
 
 		// Make a copy of each member so that you don't see any joins when the scene wraps
 		int oiginalMembers = members.Count;
@@ -50,11 +41,8 @@ public class CountrySideParallax : MonoBehaviour {
 			Transform t = wrapHelper.transform;
 			Transform mt = m.member.transform;
 			t.parent = mt.parent;
-			t.localPosition = new Vector3(mt.localPosition.x-wrapHelper.GetComponent<SpriteRenderer>().bounds.size.x/mt.parent.localScale.x, mt.localPosition.y,mt.localPosition.z);
-			members.Add(new CountrySideParallaxMember{
-				member = wrapHelper,
-				depth = m.depth
-			});
+			t.localPosition = new Vector3(mt.localPosition.x-m.width*0.5f, mt.localPosition.y,mt.localPosition.z);
+			members.Add(new CountrySideParallaxMember(wrapHelper,m.depth,m.width));
 		}
 	}
 	
@@ -66,12 +54,12 @@ public class CountrySideParallax : MonoBehaviour {
 			m.member.transform.position += speed * 1f / m.depth;
 
 			// Wrap the backgrounds if they pass outside the screen
-			float wrapDist = m.member.GetComponent<SpriteRenderer>().bounds.size.x/m.member.transform.parent.localScale.x * 2;
+			float wrapDist = m.width;
 			Vector3 lp = m.member.transform.localPosition;
-			if (lp.x > wrapDist*0.5) {
+			if (lp.x > wrapDist*0.5f) {
 				m.member.transform.localPosition = new Vector3(lp.x - wrapDist,lp.y,lp.z);
 			}
-			else if (lp.x < -wrapDist*0.5) {
+			else if (lp.x < -wrapDist*0.5f) {
 				m.member.transform.localPosition = new Vector3(lp.x + wrapDist,lp.y,lp.z);
 			}
 		}
