@@ -22,6 +22,8 @@ public class MetricController : MonoBehaviour {
 		else sipMessage = (totalTimeIdle/totalCupsConsumed).ToString("N1") + " seconds";
 		Debug.Log("Average time between sips: " + sipMessage);
 	}
+
+
 }
 
 public interface IMetric {
