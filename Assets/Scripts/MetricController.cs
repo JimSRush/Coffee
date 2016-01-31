@@ -32,7 +32,7 @@ public class MetricController : MonoBehaviour {
 		metrics.Add("Total time drinking coffee: " + totalTimeDrinking.ToString("N1") + " seconds");
 
 		string sipMessage = totalCupsConsumed.ToString("N1");
-		if (sipMessage.CompareTo("0.0") == 1) sipMessage = "N/A";
+		if (sipMessage.CompareTo("0.0") != 1) sipMessage = "N/A";
 		else sipMessage = (totalTimeIdle/totalCupsConsumed).ToString("N1") + " seconds";
 		metrics.Add("Average time between sips: " + sipMessage);
 			return metrics;
