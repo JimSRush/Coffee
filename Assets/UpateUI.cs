@@ -25,4 +25,12 @@ public class UpateUI : MonoBehaviour {
 
 	}
 
+	void Update() {
+
+		if (Input.GetKeyDown("space")){  
+			Application.LoadLevel(Application.loadedLevel);
+		}
+	}
+
+
 }
