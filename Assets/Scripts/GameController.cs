@@ -27,6 +27,7 @@ public class GameController : MonoBehaviour, IMetric {
 
 	IEnumerator changeScene() {
 		ChangingScene = true;
+		UpdateMetrics();
 		fader.FadeOut ();
 		yield return new WaitForSeconds (8);
 		DestroyObject (currentScene);
@@ -39,8 +40,6 @@ public class GameController : MonoBehaviour, IMetric {
 
 		} else {
 			//endgame scenario
-			UpdateMetrics();
-			metricController.PrintMetrics();
 		}
 	}
 
