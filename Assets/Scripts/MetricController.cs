@@ -13,13 +13,13 @@ public class MetricController : MonoBehaviour {
 //	private float averageTimeBetweenSips = 0.0f;
 
 	public void PrintMetrics () {
-		Debug.Log("Total cups consumed: " + totalCupsConsumed.ToString("#.0") + " cups");
-		Debug.Log("Total time drinking coffee: " + totalTimeDrinking.ToString("#.0") + " seconds");
+		Debug.Log("Total cups consumed: " + totalCupsConsumed.ToString("N1") + " cups");
+		Debug.Log("Total time drinking coffee: " + totalTimeDrinking.ToString("N1") + " seconds");
 		Debug.Log("Average sip length: ");
 
-		string sipMessage = totalCupsConsumed.ToString("#.0");
+		string sipMessage = totalCupsConsumed.ToString("N1");
 		if (sipMessage.CompareTo("0.0") == 1) sipMessage = "N/A";
-		else sipMessage = (totalTimeIdle/totalCupsConsumed).ToString("#.00") + " seconds";
+		else sipMessage = (totalTimeIdle/totalCupsConsumed).ToString("N1") + " seconds";
 		Debug.Log("Average time between sips: " + sipMessage);
 	}
 }
