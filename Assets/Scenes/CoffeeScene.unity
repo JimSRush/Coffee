@@ -373,7 +373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &644465899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -896,6 +896,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85beceb0f09cb4323acfa07d7d0ff1e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalCupsConsumed: 0
+  totalTimeDrinking: 0
+  totalTimeIdle: 0
+  numberOfSips: 0
+  numberOfTimesIdle: 0
 --- !u!4 &1747505200
 Transform:
   m_ObjectHideFlags: 0
