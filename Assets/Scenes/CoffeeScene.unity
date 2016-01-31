@@ -558,7 +558,6 @@ MonoBehaviour:
   - {fileID: 24504934, guid: dd6d2ea0bb0144db6b0af82d42108f65, type: 2}
   - {fileID: 24544364, guid: dd6d2ea0bb0144db6b0af82d42108f65, type: 2}
   - {fileID: 24553926, guid: dd6d2ea0bb0144db6b0af82d42108f65, type: 2}
-  - {fileID: 24577782, guid: dd6d2ea0bb0144db6b0af82d42108f65, type: 2}
   gameoverSnapshot: {fileID: 24577782, guid: dd6d2ea0bb0144db6b0af82d42108f65, type: 2}
   fadeTime: 5
 --- !u!1 &1402039166
